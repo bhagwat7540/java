@@ -1,4 +1,9 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.BitSet;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class BloomFilter {
     private final BitSet bitset;
@@ -7,6 +12,7 @@ public class BloomFilter {
     public BloomFilter(int size) {
         this.size = size;
         this.bitset = new BitSet(size);
+        int[] a = new int[5];
     }
 
     private int hash1(String s) {
