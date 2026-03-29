@@ -29,7 +29,7 @@ public class StackOverflowService {
     }
 
     public Question addQuestion(String userId, String title, String description, Set<Tag> tags) {
-        Question question = new Qustion(users.get(userId), title, description, tags);
+        Question question = new Question(users.get(userId), title, description, tags);
         questions.put(question.getId(), question);
 
         question.addObserver(reputationManager);
